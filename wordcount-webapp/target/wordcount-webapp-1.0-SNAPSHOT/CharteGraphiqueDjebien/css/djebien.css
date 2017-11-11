@@ -1,0 +1,150 @@
+/*
+ * CSS3 du TP de QL
+ * @author : Djebien Tarik
+ * @version : css 3.0
+ * @browser : firefox, safari, chrome
+ */
+@CHARSET "UTF-8";
+
+/******** Definition des polices personnalisees */
+@font-face
+{
+	font-family: 'BallparkWeiner';
+	src: url("../polices/ballpark.eot");
+	src: url("../polices/ballpark.eot?#iefix") format('embedded-opentype'),
+		 url("../polices/ballpark.woff") format('woff'),
+		 url("../polices/ballpark.ttf") format('truetype'),
+		 url("../polices/ballpark.svg#BallparkWeiner") format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face
+{
+	font-family: 'Dayrom';
+	src: url("../polices/dayrom.eot");
+	src: url("../polices/dayrom.eot?#iefix") format('embedded-opentype'),
+		 url("../polices/dayrom.woff") format('woff'),
+		 url("../polices/dayrom.ttf") format('truetype'),
+		 url("../polices/dayrom.svg#Dayrom") format('svg');
+	font-weight: normal;
+	font-style: normal;	
+}
+
+@font-face {
+    font-family: 'WindsongRegular';
+    src: url('../polices/windsong-webfont.eot');
+    src: url('../polices/windsong-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../polices/windsong-webfont.woff') format('woff'),
+         url('../polices/windsong-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/******** ELEMENT PRINCIPAUX DE LA PAGE */
+body
+{
+	background: url("../images/designs/bg.png");
+	font-family: "lucida grande",'Trebuchet MS', Arial, sans-serif;
+	color: #181818;
+}
+
+/******** HEADER */
+
+header
+{
+	background:
+	-moz-linear-gradient(center top , rgba(0, 0, 0, 0.2) 0pt, transparent 5%, transparent 97%, rgba(0, 0, 0, 0.45) 100%) repeat scroll 0 0%, 
+	-moz-linear-gradient(left center , rgba(0, 0, 0, 0.2) 0pt, transparent 0.2%, transparent 99.8%, rgba(0, 0, 0, 0.2) 100%) repeat scroll 0 0%, 
+	-moz-linear-gradient(center bottom , #666666 0pt, #5E5E5E 50%, #707070 51%, #808080 100%) repeat scroll 0 0 transparent;
+	
+	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.7);
+	margin-bottom: 3%;
+}
+
+/******** ELEMENTS DE CONTENU */
+
+/* SECTION */
+section#sectionMain
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 99%;
+	padding-bottom: 7px;
+	border: 0.2px solid rgba(255,255,255,0.5);
+	border-radius: 10px;
+	box-shadow : 6px 6px 2px rgba(0,0,0,0.5);
+}
+
+section p
+{
+	margin: 5px;
+	padding: 3px;
+}
+
+/******** FOOTER */
+footer
+{
+	background:
+	-moz-linear-gradient(center top , rgba(0, 0, 0, 0.2) 0pt, transparent 5%, transparent 97%, rgba(0, 0, 0, 0.45) 100%) repeat scroll 0 0%, 
+	-moz-linear-gradient(left center , rgba(0, 0, 0, 0.2) 0pt, transparent 0.2%, transparent 99.8%, rgba(0, 0, 0, 0.2) 100%) repeat scroll 0 0%, 
+	-moz-linear-gradient(center bottom , #666666 0pt, #5E5E5E 50%, #707070 51%, #808080 100%) repeat scroll 0 0 transparent;
+	
+	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.7);
+	margin-top: 7px;
+	margin-bottom: 1px;
+	padding-top: 1px;
+	bottom: 1%;
+}
+
+footer p
+{
+	font-weight: normal;
+	color: white;
+	text-shadow: 8px 3px 5px black;
+	font-size: 1.1em;
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+
+footer p#copyright
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	text-align: left;
+	padding: 3px;
+}
+
+footer p#appVersion
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 40%;
+	text-align: right;
+	padding: 3px;
+}
+
+/******** SURCHARGE JQUERY UI */
+
+/* bouton Jquery */
+input.ui-button 
+{
+	font-size: 11px;
+	text-align: center;
+	font-weight: bold;
+	padding-left: 3px;
+	padding-right: 3px;
+	border-color: white;
+	box-shadow : 2px 2px 2px black;
+}
+
+/* Menu Jquery */
+.ui-accordion .ui-helper-reset
+{
+	padding: 2px;
+	font-size: 13px;
+	border: 0.2px solid rgba(255,255,255,0.5);
+	box-shadow : 6px 6px 2px rgba(0,0,0,0.5);
+	overflow: auto;
+}

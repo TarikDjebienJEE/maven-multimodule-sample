@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>wordcount</groupId>
+	<artifactId>wordcount-parent</artifactId>
+	<packaging>pom</packaging>
+	<version>3.0-SNAPSHOT</version>
+	<name>Maven</name>
+	<url>http://maven.apache.org/maven2</url>
+
+	<developers>
+		<developer>
+			<id>tdjebien</id>
+			<name>Tarik Djebien</name>
+			<email>tarik.djebien@gmail.com</email>
+			<organization>Shinra corporation</organization>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+			<properties>
+				<picUrl>http://djebien.tarik.perso.sfr.fr/tarik_M5.jpg</picUrl>
+			</properties>
+		</developer>
+	</developers>
+
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>MyRepositoryProxy</name>
+			<url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>nexus</id>
+			<name>MyRepositoryProxy</name>
+			<url>http://localhost:8081/nexus/content/repositories/releases</url>
+		</repository>
+	</distributionManagement>
+
+	<repositories>
+		<repository>
+			<id>nexus</id>
+			<name>RepositoryProxy</name>
+			<url>http://localhost:8081/nexus/content/groups/public</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>nexus</id>
+			<name>RepositoryProxy</name>
+			<url>http://localhost:8081/nexus/content/groups/public</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<locales>en,fr</locales>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2-beta-2</version>
+				<executions>
+					<execution>
+						<id>create-project-bundle</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<descriptorRefs>
+								<descriptorRef>project</descriptorRef>
+							</descriptorRefs>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.5</version>
+			</plugin>
+		</plugins>
+	</build>
+	<modules>
+		<module>wordcount-business</module>
+		<module>wordcount-webapp</module>
+		<module>palindrome-business</module>
+	</modules>
+	<reporting>
+		<plugins>
+			<!-- JAVADOC -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9</version>
+				<configuration>
+					<links>
+						<link>http://java.sun.com/j2se/1.6.0/docs/api</link>
+					</links>
+				</configuration>
+			</plugin>
+			<!-- TEST REPORTS -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>2.13</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jxr-plugin</artifactId>
+				<version>2.3</version>
+			</plugin>
+			<!-- CHECKSTYLE -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>2.9.1</version>
+				<configuration>
+					<configLocation>config/sun_checks.xml</configLocation>
+				</configuration>
+			</plugin>
+		</plugins>
+	</reporting>
+
+	<!-- Information du depot SVN -->
+	<scm>
+		<connection>scm:svn:file:///Users/tarik/Documents/Informatique/Projet/svnTarik/wordcount-parent</connection>
+		<developerConnection>scm:svn:file:///Users/tarik/Documents/Informatique/Projet/svnTarik/wordcount-parent</developerConnection>
+		<tag>HEAD</tag>
+		<url>file:///Users/tarik/Documents/Informatique/Projet/svnTarik/wordcount-parent</url>
+	</scm>
+</project>

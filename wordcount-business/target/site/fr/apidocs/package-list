@@ -1,0 +1,3 @@
+wordcount.service
+wordcount.service.impl
+wordcount.util

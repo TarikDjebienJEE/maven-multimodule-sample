@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="textPathFile">/Users/tarik/Desktop/test.txt</entry>
+	<entry key="textPathUrl">http://djebien.tarik.perso.sfr.fr/test.txt</entry>
+</properties>

@@ -1,0 +1,6 @@
+org.palindrome.business
+org.palindrome.business.impl
+wordcount.controller
+wordcount.service
+wordcount.service.impl
+wordcount.util

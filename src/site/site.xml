@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Qualite du logiciel - TP Test d'integration et deploiement">
+  <bannerLeft>
+    <name>Djebien Tarik</name>
+    <src>images/logo_ustl.png</src>
+  </bannerLeft>
+  <bannerRight>
+  	<name>Tarik Djebien - QL M2 IPINT</name>
+    <href>http://portail.fil.univ-lille1.fr/portail/index.php?dipl=MMiage&amp;sem=M2MFAFC&amp;ue=QL</href>
+  </bannerRight>
+  <body>
+    <menu name="Qualite du logiciel - TP Test d'integration et deploiement">
+      <item name="System Architecture" href="/developer/architecture.html"/>
+    </menu>
+    <menu ref="reports"/>
+  </body>
+</project>
